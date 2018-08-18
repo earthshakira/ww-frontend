@@ -1,28 +1,24 @@
 <mat-toolbar color="primary">
   <span>
-    <img src="https://images.vexels.com/media/users/3/137615/isolated/preview/5af2a9cbd8cd93aa90889fbc05656cb5-geometric-abstract-logo-cube-by-vexels.png" height="30px"/>
+    <img src="https://images.vexels.com/media/users/3/137615/isolated/preview/5af2a9cbd8cd93aa90889fbc05656cb5-geometric-abstract-logo-cube-by-vexels.png"
+         height="30px"/>
   </span>
-  <a class="mat-button ng-star-inserted" mat-button="" tabindex="0"
-     aria-disabled="false" href="/components"><span class="mat-button-wrapper">Components</span>
-    <div class="mat-button-ripple mat-ripple" matripple=""></div>
-    <div class="mat-button-focus-overlay"></div>
-  </a>
-  <div class="right-status-items">
-    <div class="round text-">
-      SA
+    <a class="mat-button ng-star-inserted" mat-button="" tabindex="0"
+       aria-disabled="false" href="/components"><span class="mat-button-wrapper">Components</span>
+        <div class="mat-button-ripple mat-ripple" matripple=""></div>
+        <div class="mat-button-focus-overlay"></div>
+    </a>
+    <div class="right-status-items" *ngIf="name">
+        <small style="font-size: 0.5em">
+            {{name}}
+        </small>
+        <div class="round">
+            {{abbr}}
+        </div>
+        <div class="mat-button ng-star-inserted" mat-button="" tabindex="0"
+           aria-disabled="false" (click)="logoutClick()"><span class="mat-button-wrapper">Logout</span>
+            <div class="mat-button-ripple mat-ripple" matripple=""></div>
+            <div class="mat-button-focus-overlay"></div>
+        </div>
     </div>
-    <small>
-      Shubham Arawkar
-    </small>
-  </div>
-</mat-toolbar>
-
-<mat-toolbar>
-  <mat-toolbar-row>
-    <span>First Row</span>
-  </mat-toolbar-row>
-
-  <mat-toolbar-row>
-    <span>Second Row</span>
-  </mat-toolbar-row>
 </mat-toolbar>

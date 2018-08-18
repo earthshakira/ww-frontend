@@ -1,0 +1,10 @@
+<mat-progress-bar *ngIf="loader" mode="indeterminate"></mat-progress-bar>
+<div>
+    <div *ngIf="tasks.length == 0">
+        <i>Nothing to Show</i>
+    </div>
+    <mat-card *ngFor="let task of tasks" style="text-align: left" class="taskContainer">
+        {{task.name}}
+        <button mat-raised-button color="primary" class="taskButton" (click)="performAction(task)">{{task.action}}</button>
+    </mat-card>
+</div>

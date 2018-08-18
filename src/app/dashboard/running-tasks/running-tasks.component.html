@@ -1,0 +1,12 @@
+<mat-progress-bar *ngIf="loader" mode="indeterminate"></mat-progress-bar>
+<div>
+    <div *ngIf="activeTasks.length == 0">
+        <i>Nothing to Show</i>
+    </div>
+    <mat-card *ngFor="let task of activeTasks" style="text-align: left" class="taskContainer">
+        {{task.name}}<br>
+        <small>{{task.action}}</small>
+        <mat-progress-bar mode="determinate" class="taskProgress"  [value]="task.progress"></mat-progress-bar>
+    </mat-card>
+</div>
+
